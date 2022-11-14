@@ -1,13 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/container.dart';
+import 'package:flutter/src/widgets/framework.dart';
 
-class HomePage extends StatelessWidget {
-  //bool value = false;
+class g extends StatefulWidget {
+  const g({super.key});
+
+  @override
+  State<g> createState() => _gState();
+}
+
+class _gState extends State<g> {
+  bool isChecked = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blueAccent,
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 194, 96, 211),
+        backgroundColor: Color.fromARGB(255, 156, 209, 253),
         title: Text("darshan soni"),
       ),
       body: Center(
@@ -40,15 +49,22 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                 ),
-                // Checkbox(
-                //   title: Text("agree"),
-                //   value: value,
-                //   onChanged: (value) {
-                //     SetState(() {
-                //       this.value = true;
-                //     });
-                //   },
-                // ),
+
+                //  check box;
+                Checkbox(
+                  value: isChecked,
+                  onChanged: (value) {
+                    if (isChecked == true) {
+                      setState(() {
+                        isChecked = false;
+                      });
+                    } else {
+                      setState(() {
+                        isChecked = true;
+                      });
+                    }
+                  },
+                ),
                 ElevatedButton(
                   child: Text("More"),
                   onPressed: () {

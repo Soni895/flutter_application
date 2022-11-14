@@ -98,6 +98,12 @@ class _HomeState extends State<Home> {
                         });
                   },
                 ),
+                // ElevatedButton(
+                //     onPressed: () {
+                //       Navigator.push(context,
+                //           MaterialPageRoute(builder: (builder) => const g()));
+                //     },
+                //     child: Text('Go to next page'))
               ],
             ),
           ),
